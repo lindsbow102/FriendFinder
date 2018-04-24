@@ -1,4 +1,5 @@
-var path = require('path');
+const path = require('path');
+const fs = require('fs');
 
 //Export HTML Routes
 module.exports = function(app) {
@@ -15,13 +16,5 @@ module.exports = function(app) {
 };
 
 
-/*var express = require("express");
 
-var app = express();
-var PORT = 8080;
-
-app.get("../../public/survey.html", function(req, res) {
-    res.send("Welcome to the Star Wars Page!");
-  });*/
-  
 
