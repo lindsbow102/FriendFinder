@@ -10,7 +10,7 @@ module.exports = function(app) {
 
     //Total list of friends entries
     app.get('/api/friends', function (req, res) {
-        debugger;
+        
         res.json(friends);
     });
 

@@ -5,22 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Boostrap 4.0-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <title>Document</title>
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <title>Friend Finder</title>
     <style>
-        .jumbotron {
+        .section-teal {
+            padding-top: 50px;
             color: white;
             background-color: #004d40;
             text-align: center;
+            height: 500px;
         }
 
-        .my-4 {
-            border: 1px solid gray;
+        hr{
+            border: 1px gray solid;
+        }
+
+        .parallax-container {
+            height: 700px;
         }
 
         /* unvisited link */
+
         a:link {
             color: #d7ccc8;
         }
@@ -46,18 +56,31 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Friend Finder</h1>
-        <p class="lead">Ever wonder who your friend soul-mates are? Look no further.</p>
-        <hr class="my-4">
-        <p>Answer a few basic questions to find your most compatible friend!!! Goodbye loneliness.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="/survey" role="button">Go To Survey</a>
-        </p>
-        <div class="container">
-            <a href="/api/friends">API Friends List</a>
-            |
-            <a href="https://github.com/lindsbow102/FriendFinder">GitHub Repo</a>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/parallax1.jpg">
+        </div>
+    </div>
+    <div class="section-teal">
+        <div class="row container">
+            <h1 class="header">Friend Finder</h1>
+            <h4>Ever wonder who your friend soul-mates are? Look no further.</h4>
+            <hr>
+            <h4>Answer a few basic questions to find your most compatible friend!!! Goodbye loneliness.</h4>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="/survey" role="button">Go To Survey</a>
+            </p>
+            <div class="container">
+                <a href="/api/friends">API Friends List</a>
+                |
+                <a href="https://github.com/lindsbow102/FriendFinder">GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/parallax2.jpg">
         </div>
     </div>
 
