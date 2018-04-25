@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="submitButton">Submit Responses
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+    <!-- Modal Dialog Displaying Closest Friend Match -->
+    <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Closest Friend Match</h4>
+                <div class="divider"></div>
+                <h5 id="userMatch"></h5>
+                <img id="userMatchImage" class="materialboxed" width="650" src="">
+            </div>
+            <div class="modal-footer">
+                <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+            </div>
+        </div>
+    <script>
+        $('.modal').modal({
+            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: .5, // Opacity of modal background
+            inDuration: 300, // Transition in duration
+            outDuration: 200, // Transition out duration
+            startingTop: '4%', // Starting top style attribute
+            endingTop: '10%', // Ending top style attribute
+            ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+              alert("Ready");
+              console.log(modal, trigger);
+            },
+            complete: function() { alert('Closed'); } // Callback for Modal close
+          }
+        );
+    </script>
+</body>
+</html>

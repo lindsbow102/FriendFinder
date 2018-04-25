@@ -161,5 +161,5 @@ var friendsArray = [
 		]
 	}
 ];
-
+//console.log(JSON.stringify(friendsArray, null, 2));
 module.exports = friendsArray;

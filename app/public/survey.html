@@ -20,12 +20,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Compiled and minified Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
     <!-- Compiled and minified Materialize JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .nav-wrapper {
+            background-color: #004d40;
+            color: white;
+        }
+        .page-footer {
+            background-color: #004d40;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,12 +43,12 @@
     <body>
         <header>
             <nav>
-                <div class="nav-wrapper blue-grey accent-2">
-                        <span class="social social-slideshare"></span>
+                <div class="nav-wrapper accent-2">
+                    <span class="social social-slideshare"></span>
                     <a href="/" class="brand-logo" id="logo">Friend Finder</a>
                     <ul class="right hide-on-med-and-down" id="head-nav-links">
                         <li>
-                            <a href="/api/friends.js">API Friends List</a>
+                            <a href="/api/friends">API Friends List</a>
                         </li>
                         <li>
                             <a href="https://github.com/lindsbow102/FriendFinder">GitHub Repo</a>
@@ -211,7 +221,7 @@
             </div>
         </main>
 
-        <footer class="page-footer blue-grey accent-2">
+        <footer class="page-footer accent-2">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">

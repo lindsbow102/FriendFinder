@@ -9,22 +9,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        .jumbotron {
+            color: white;
+            background-color: #004d40;
+            text-align: center;
+        }
+        .my-4 {
+            border: 1px solid gray;
+        }
+
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Friend Finder</h1>
-            <p class="lead">Ever wonder who your friend soul-mates are? Look no further.</p>
-            <hr class="my-4">
-            <p>Answer a few basic questions to find your most compatible friend!!! Goodbye loneliness.</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="/survey" role="button">Go To Survey</a>
-            </p>
+    <div class="jumbotron">
+        <h1 class="display-4">Friend Finder</h1>
+        <p class="lead">Ever wonder who your friend soul-mates are? Look no further.</p>
+        <hr class="my-4">
+        <p>Answer a few basic questions to find your most compatible friend!!! Goodbye loneliness.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/survey" role="button">Go To Survey</a>
+        </p>
+        <div class="container">
+            <a href="/api/friends">API Friends List</a>
+            |
+            <a href="https://github.com/lindsbow102/FriendFinder">GitHub Repo</a>
         </div>
-        <a href="/api/friends">API Friends List</a>
-        |
-        <a href="https://github.com/lindsbow102/FriendFinder">GitHub Repo</a>
     </div>
 
 
