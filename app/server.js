@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 var PORT = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname, './app/public')));
+app.use(express.static(path.join(__dirname, 'app/public')));
 
 // Add middleware for parsing incoming request bodies
 app.use(bodyParser.json());
@@ -18,5 +18,5 @@ require(path.join(__dirname, './routing/htmlRoutes'))(app);
 
 // Start listening on PORT
 app.listen(PORT, function() {
-    console.log('Friend Finder app is listening on PORT: ' + PORT);
+    console.log(`App listening on http://localhost:${PORT}`);
   });

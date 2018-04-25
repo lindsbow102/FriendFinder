@@ -31,9 +31,32 @@
             background-color: #004d40;
             color: white;
         }
+
         .page-footer {
             background-color: #004d40;
             color: white;
+        }
+        /* unvisited link */
+        a:link {
+            color: #d7ccc8;
+        }
+
+        /* visited link */
+
+        a:visited {
+            color: #a1887f;
+        }
+
+        /* mouse over link */
+
+        a:hover {
+            color: #80cbc4;
+        }
+
+        /* selected link */
+
+        a:active {
+            color: #90a4ae;
         }
     </style>
 </head>
@@ -244,94 +267,49 @@
             </div>
         </div>
 
+        <!--Javascript Goodness-->
         <script type="text/javascript">
-        $(document).ready(function () {
-            $('select').material_select();
-
-            // modal trigger
-            $("#submitButton").on("click", function (event) {
-                event.preventDefault();
-
-                //Gather user inputs
-                var userInput = {
-                    name: $('#userName').val().trim(),
-                    photo: $('#userPhoto').val().trim(),
-                    scores: [
-                        $('#q1').val().trim(),
-                        $('#q2').val().trim(),
-                        $('#q3').val().trim(),
-                        $('#q4').val().trim(),
-                        $('#q5').val().trim(),
-                        $('#q6').val().trim(),
-                        $('#q7').val().trim(),
-                        $('#q8').val().trim(),
-                        $('#q9').val().trim(),
-                        $('#q10').val().trim()
-                    ]
-                };
-
-                // Add user inputs to friends list
-                $.post('/api/friends', userInput)
-                    .done(function (data) {
-                        // console.log('response = ' + JSON.stringify(data));
-                        // Set the name and image values of friend match
-                        $('#userMatch').html(data.matchName);
-                        $("#userMatchImage").attr("src", data.matchImage);
-
-                        // Pop open the modal dialog
-                        $('#modal1').modal('open');
-                    });
-            });
-        });
-
-
-            $('.modal').modal();
-    </script>
-            //Need this code to make dropdown menus appear
-            /*$(document).ready(function () {
+            $(document).ready(function () {
                 $('select').material_select();
 
-                $('.modal').modal({
-                    dismissible: false, // Modal can be dismissed by clicking outside of the modal
-                    opacity: .5, // Opacity of modal background
-                    inDuration: 300, // Transition in duration
-                    outDuration: 200, // Transition out duration
-                    startingTop: '4%', // Starting top style attribute
-                    endingTop: '10%' // Ending top style attribute
+                // modal trigger
+                $("#submitButton").on("click", function (event) {
+                    event.preventDefault();
+
+                    //Gather user inputs
+                    var userInput = {
+                        name: $('#userName').val().trim(),
+                        photo: $('#userPhoto').val().trim(),
+                        scores: [
+                            $('#q1').val().trim(),
+                            $('#q2').val().trim(),
+                            $('#q3').val().trim(),
+                            $('#q4').val().trim(),
+                            $('#q5').val().trim(),
+                            $('#q6').val().trim(),
+                            $('#q7').val().trim(),
+                            $('#q8').val().trim(),
+                            $('#q9').val().trim(),
+                            $('#q10').val().trim()
+                        ]
+                    };
+
+                    // Add user inputs to friends list
+                    $.post('/api/friends', userInput)
+                        .done(function (data) {
+                            // console.log('response = ' + JSON.stringify(data));
+                            // Set the name and image values of friend match
+                            $('#userMatch').html(data.matchName);
+                            $("#userMatchImage").attr("src", data.matchImage);
+
+                            // Pop open the modal dialog
+                            $('#modal1').modal('open');
+                        });
                 });
             });
-            // Capture the form inputs
-            $("#submitButton").on("click", function (event) {
-                event.preventDefault();
 
-                // Gather user inputs
-                var userInput = {
-                    name: $('#userName').val().trim(),
-                    photo: $('#userPhoto').val().trim(),
-                    scores: [
-                        $('#q1').val().trim(),
-                        $('#q2').val().trim(),
-                        $('#q3').val().trim(),
-                        $('#q4').val().trim(),
-                        $('#q5').val().trim(),
-                        $('#q6').val().trim(),
-                        $('#q7').val().trim(),
-                        $('#q8').val().trim(),
-                        $('#q9').val().trim(),
-                        $('#q10').val().trim()
-                    ]
-                };
-                // Add user inputs to friends list
-                $.post('/api/friends', userInput)
-                    .done(function (data) {
-                        // console.log('response = ' + JSON.stringify(data));
-                        // Set the name and image values of friend match
-                        $('#userMatch').html(data.matchName);
-                        $("#userMatchImage").attr("src", data.matchImage);
-                        // Pop open the modal dialog
-                        $('#modal1').modal('open');
-                    });
-            });*/
+            $('.modal').modal();
+        </script>
 
     </body>
 
