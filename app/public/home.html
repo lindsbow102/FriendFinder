@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to the jQuery Library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
@@ -21,7 +23,7 @@
             height: 500px;
         }
 
-        hr{
+        hr {
             border: 1px gray solid;
         }
 
@@ -59,10 +61,10 @@
 
     <div class="parallax-container">
         <div class="parallax">
-            <img src="images/parallax1.jpg">
+            <img src="https://media.indiatimes.in/media/content/itimes/photo/2015/Jul/31/1438364895-friends-and-family-clip-art-clipart-panda-free-clipart-images.jpg">
         </div>
     </div>
-    <div class="section-teal">
+    <div class="section-teal section">
         <div class="row container">
             <h1 class="header">Friend Finder</h1>
             <h4>Ever wonder who your friend soul-mates are? Look no further.</h4>
@@ -80,11 +82,17 @@
     </div>
     <div class="parallax-container">
         <div class="parallax">
-            <img src="images/parallax2.jpg">
+            <img src="https://pathmakerschurch.files.wordpress.com/2013/04/kidsrunning.jpg">
         </div>
     </div>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
 
+
+    </script>
 </body>
 
 </html>
